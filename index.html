@@ -1,72 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arva Portofolio</title>
-    <link rel="stylesheet" href="design.css"/>
+    <!-- Import Font Poppins & Cairo (Arab) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="design.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-             <div class="logo">PortFolio.</div>
-         <ul class="navigasi">
-           <li><a href="#">HOME</a></li>
-           <li><a href="#About">ABOUT</a></li>
-           <li><a href="#Educate">EDUCATION</a></li>
-           <li><a href="#">CONTACT</a></li>
-         </ul>
-         <div class="bahasa">
-         <a href="#">JPN</a> | <a href="#" class="act">ENG</a> | <a href="#">IDN</a>
-         </div>
-        </nav>
-    </header>
 
-    <main class="identitas">
-        <div class="identitas_txt">
-            <p class="intro">Hello</p>
-            <h1>I'M MUHAMMAD <span class="Name">ARVA </span>ZUFAR A</h1>
-            <p class="description">Saya merupakan siswa di SMK Negeri 40 Jakarta <br>
-                saya berada di jurusan Rekayasa Perangkat Lunak. Saya menguasai <br> 
+<body>
+
+<div id="loader" class="loader">
+    <div class="loader-spinner"></div>
+    <p id="load-text">Changing Language...</p>
+</div>
+
+<header id="header">
+
+    <nav class="navbar">
+
+        <a href="#Home" class="logo">
+            Port<span>folio.</span>
+        </a>
+
+        <ul class="navigasi">
+            <li><a href="#Home" class="active" id="nav-home">Beranda</a></li>
+            <li><a href="#About" id="nav-about">Tentang</a></li>
+            <li><a href="#Educate" id="nav-edu">Pendidikan</a></li>
+            <li><a href="#yanto" id="nav-project">Projek</a></li>
+            <li><a href="#Contact" id="nav-contact">Kontak</a></li>
+        </ul>
+
+        <div class="language">
+            <button id="id-btn" class="active-lang">ID</button>
+            <span>|</span>
+            <button id="en-btn">EN</button>
+            <span>|</span>
+            <button id="ar-btn">AR</button>
+        </div>
+    </nav>
+</header>
+
+    <section class="identitas" id="Home">
+        <div class="identitas_txt" id="Home">
+            <p class="intro" id="hello">Halo</p>
+            <h1 id="hero-title">I'M MUHAMMAD <span class="Name">ARVA </span>ZUFAR A</h1>
+            <p class="description" id="hero-desc">Saya merupakan siswa di SMK Negeri 40 Jakarta <br>
+                saya berada di jurusan Rekayasa Perangkat Lunak. Saya menguasai <br>
                 bahasa pemrograman HTML, CSS, C#.
             </p>
-           <a href="About" class="button">GET STARTED</a>
-
-              
+            <a href="#About" class="button" id="hero-btn" >MULAI</a>
         </div>
 
         <div class="image">
-            <img src="arvapict.jpg" alt="Gambar saya">
+            <img src="image/arvapict.jpg" alt="Gambar saya">
         </div>
-    </main> 
-    <section>
-        <div class="abt_me" id="About">
-            <h2>About Me</h2>
-        <div class="bout">
-            <p>Nama saya Muhammad Arva Zufar Adriansyah saya merupakan siswa kelas 11 di SMK Negeri 40 Jakarta. Saya berasal dari kota Jakarta <br>
-            Saya menguasai beberapa tools pengembangan seperti figma, canva, visual studio code. Saya pun menguasai beberapa bahasa pemrograman <br>
-            seperti C#, CSS, HTML. 
-            </p>
-        </div>    
-        </div>
-        
+    </section>
 
-    
+    <section class="about" id="About">
+
+        <div class="about-title">
+            <h2 id="about-title">Tentang Saya</h2>
+            <div class="line"></div>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-left">
+
+                <h3 id="about-job">Frontend Developer & UI Designer</h3>
+
+                <p id="about-desc1">
+                    Saya merupakan siswa jurusan Rekayasa Perangkat Lunak di
+                    SMK Negeri 40 Jakarta yang memiliki minat pada
+                    pengembangan website modern dan desain antarmuka.
+                </p>
+
+                <p id="about-desc2">
+                    Saya senang mempelajari teknologi baru serta membangun
+                    website yang cepat, responsif, dan memiliki tampilan
+                    profesional.
+                </p>
+
+            </div>
+
+            <div class="about-right">
+
+                <div class="info-card">
+                    <span id="about-name">Nama</span>
+                    <h4>Muhammad Arva Zufar A.</h4>
+                </div>
+
+                <div class="info-card">
+                    <span id="about-school">Sekolah</span>
+                    <h4>SMKN 40 Jakarta</h4>
+                </div>
+
+                <div class="info-card">
+                    <span id="about-focus">Fokus</span>
+                    <h4>Frontend Developer</h4>
+                </div>
+
+                <div class="info-card">
+                    <span id="about-location">Lokasi</span>
+                    <h4>Jakarta, Indonesia</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
     <section class="footer">
         <div class="foot1">
             <h3>SOFT SKILLS</h3>
             <ul>
-                <li><a href="#">KERJA SAMA TIM</a></li>
-                <li><a href="#">KOMUNIKASI EFEKTIF</a></li>
-                <li><a href="#">PROBLEM SOLVING</a></li>
+                <li><a href="#" id="softskills1">KERJA SAMA TIM</a></li>
+                <li><a href="#" id="softskills2">KOMUNIKASI EFEKTIF</a></li>
+                <li><a href="#" id="softskills3">PUBLIC SPEAKING</a></li>
             </ul>
         </div>
 
         <div class="foot1">
-            <h3>TOOLS YANG DIKUASAI</h3>
+            <h3 id="tools">TOOLS YANG DIKUASAI</h3>
             <ul>
                 <li><a href="#">FIGMA</a></li>
                 <li><a href="#">VISUAL STUDIO CODE</a></li>
@@ -84,124 +147,333 @@
                 <li><a href="#">JAVA SCRIPT</a></li>
             </ul>
         </div>
-        
-        </section>
-        <section class="skills">
-            <h2>My Hard Skills</h2>
-            <div class="skill">
-                <div class="skill_name">HTML</div>
-                <div class="progress"><span style="--skill-level: 65%" data-label="65%"><b>65%</b></span></div>
+
+    </section>
+
+    <section class="skills">
+        <h2>My Hard Skills</h2>
+        <div class="skill">
+            <div class="skill-header">
+                <span>HTML</span>
+                <span>65%</span>
             </div>
 
-            <div class="skill">
-                <div class="skill_name">CSS</div>
-                <div class="progress"><span style="--skill-level: 70%" data-label="70%"><b>70%</b></span></div>
-            </div>
-
-             <div class="skill">
-                <div class="skill_name">JavaScript</div>
-                <div class="progress"><span style="--skill-level: 40%" data-label="40%"><b>40%</b></span></div>
-            </div>
-
-            <div class="skill">
-                <div class="skill_name">C#</div>
-                <div class="progress"><span style="--skill-level: 80%" data-label="80%"><b>80%</b></span></div>
-            </div>
-        </section>
-        <section class="edu" id="Educate">
-            <h3>Education</h3>
-            <div class="educate">
-
-            <div class="card">
-            <div class="school">
-                <span class="edc">Sekolah Dasar</span>
-                <span class="hst">2016 - 2021</span>
-                <h3>SDN Pisangan Baru 07</h3>
-            </div>
-            </div>
-
-            <div class="card"> 
-            <div class="school">
-                <span class="edc">SMP</span>
-                <span class="hst">2021 - 2024</span>
-                <h3>SMP Negeri 7 Jakarta</h3>
-            </div>
-            </div>
-
-            <div class="card"> 
-            <div class="school">
-                <span class="edc">SMK</span>
-                <span class="hst">2024 - Sekarang</span>
-                <h3>SMK Negeri 40 Jakarta</h3>
-            </div>
+            <div class="progress">
+                <div class="progress-bar" style="width:65%"></div>
             </div>
         </div>
-        </section>
-    </section>
-    <section class="projects">
-    <h1>My Projects</h1>
-    <div class="project-container">
-      
-      <div class="project-card">
-        <img src="Project-1.jpeg" alt="Project 1">
-        <h3>Neon - Figma</h3>
-        <p>Ini merupakan projek yang baru saya kerjakan, Neon akan dirancang menjadi aplikasi musik yang memberikan beragam fitur, saya terinspirasi dari spotify </p>
-      </div>
 
-      <div class="project-card">
-        <a href ="https://www.figma.com/proto/3Lte1Y7GpW30HFrabhEyJU?node-id=0-1&t=ek8ui5ywvrFfZzWc-6" target = "_blank">
-        <img src="Project-2.jpeg" alt="Project 2">
-        <h3>NBA All Star 2026 - Figma</h3>
-        <p> Ini adalah projek desain dari web olahraga, isinya adalah berita serta beberapa informasi dari seluruh pemain di liga beserta tim yang ada di liga </p>
-        </a>
-    </div>
+        <div class="skill">
+            <div class="skill-header">
+                <span>CSS</span>
+                <span>75%</span>
+            </div>
 
-      <div class="project-card">
-        <img src="Project-3.png" alt="Project 3">
-        <h3>FisCo - Figma</h3>
-        <p>FisCo adalah aplikasi untuk mengumpulkan orang orang yang hobi dalam memancing di suatu komunitas, serta menyediakan layanan toko online yang menjual berbagai keperluan memancing</p>
-      </div>
-    </div>
-    </section>
-    <form class="contact_me">
-        <h2>Contact Me</h2>
-
-    <label for="name">Nama</label>
-    <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
-    
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
-    
-    <label for="message">Pesan</label>
-    <textarea id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required></textarea>
-    
-    <button type="submit">Kirim Pesan</button>
-    </form>
-
-        <div class="socmed">
-            <a href="https://www.linkedin.com/in/muhammad-arva-237389382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/addarvv?igsh=MXFocHM5dWJ6dno4bQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+            <div class="progress">
+                <div class="progress-bar" style="width:75%"></div>
+            </div>
         </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>JavaScript</span>
+                <span>30%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:30%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>C#</span>
+                <span>70%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-header">
+                <span>PHP</span>
+                <span>77%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" style="width:77%"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="edu" id="Educate">
+
+        <div class="section-title">
+            <h2 id="edu-title">Pendidikan</h2>
+            <p id="edu-desc">Perjalanan pendidikan yang membentuk kemampuan saya hingga saat ini.</p>
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+                    <span class="year" id="edu-years">2024 - Sekarang</span>
+                    <h2>SMK Negeri 40 Jakarta</h2>
+                    <h4 id="edu-sub">Rekayasa Perangkat Lunak</h4><br>
+                    <p id="edu-smkdesc">
+                        Mempelajari HTML, CSS, JavaScript, C#, database,
+                        serta pengembangan website dan aplikasi desktop.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="year">2021 - 2024</span>
+                    <h2>SMP Negeri 7 Jakarta</h2>
+                    <h4 id="edu-smp">Sekolah Menengah Pertama</h4><br>
+                    <p id="edu-smpdesc">
+                        Mengembangkan kemampuan akademik dan mulai
+                        tertarik pada dunia teknologi serta desain.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <span class="year">2016 - 2021</span>
+                    <h2>SDN Pisangan Baru 07</h2>
+                    <h4 id="edu-sd">Sekolah Dasar</h4><br>
+                    <p id="edu-sddesc">
+                        Membangun dasar pendidikan serta mulai mengenal
+                        komputer dan teknologi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="yanto">
+
+        <div class="section-title">
+            <h2 id="project-title">Projek Saya</h2>
+            <p id="project-desc">Beberapa projek yang telah saya kerjakan.</p>
+        </div>
+
+        <div class="project-container">
+            <div class="project-card">
+                <img src="image/Project-1.jpeg" alt="Neon">
+                <div class="project-content">
+
+                    <span class="project-tag">UI / UX Design</span>
+                    <h3>Neon Music</h3>
+                    <p id="project-desc1">
+                        Desain aplikasi streaming musik modern dengan
+                        tampilan minimalis yang terinspirasi dari Spotify.
+                    </p>
+                    <div class="project-footer">
+                        <span>Figma</span>
+                        <a href="#">
+                            View Project
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="image/Project-2.jpeg" alt="NBA">
+                <div class="project-content">
+                    <span class="project-tag">Website Design</span>
+                    <h3>NBA All Star 2026</h3>
+                    <p id="project-desc2">
+                        Website berita olahraga yang menampilkan informasi
+                        pemain, tim, statistik dan jadwal pertandingan NBA.
+                    </p>
+                    <div class="project-footer">
+                        <span>Figma</span>
+                        <a href="https://www.figma.com/proto/3Lte1Y7GpW30HFrabhEyJU?node-id=0-1&t=ek8ui5ywvrFfZzWc-6"
+                            target="_blank">
+                            View Project
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="image/Project-3.png" alt="Fisco">
+                <div class="project-content">
+                    <span class="project-tag">Mobile App</span>
+                    <h3>FisCo</h3>
+                    <p id="project-desc3">
+                        Aplikasi komunitas memancing lengkap dengan fitur
+                        marketplace perlengkapan memancing.
+                    </p>
+                    <div class="project-footer">
+                        <span>Figma</span>
+                        <a href="https://www.figma.com/proto/e9SuKNd2c1csh8HzCgCnhW?node-id=0-1&t=JBOQuHnjdPpsuxqY-6"
+                            target="_blank">
+                            View Project
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="contact-section" id="Contact">
+
+        <div class="section-title">
+            <h2 id="contact-title">Kontak Saya</h2>
+            <p id="contact-txt">Mari berdiskusi mengenai project, desain, atau peluang kerja sama.</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <h3 id="text-contact">Ayo Terhubung!</h3>
+
+                <p id="contact-desc">
+                    Jangan ragu untuk menghubungi saya jika ingin
+                    berdiskusi mengenai project atau sekadar bertukar ide.
+                </p>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>arvaaadr77z@gmail.com</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <span>@addarvv</span>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/Arva</span>
+                </div>
+
+                <div class="contact-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+            <form class="contact-form">
+
+                <input
+                    id="name"
+                    type="text"
+                    placeholder="Nama"
+                    required>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    required>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Tulis pesan..."
+                    required></textarea>
+
+                <button type="submit" id="form-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h2>Port<span>folio.</span></h2>
+
+                <p>
+                    Building modern websites with clean,
+                    responsive, and user-friendly designs.
+                </p>
+
+                <div class="footer-info">
+                    <p><i class="fas fa-location-dot"></i> Jakarta, Indonesia</p>
+                    <p><i class="fas fa-envelope"></i> arvaaadr77z@gmail.com</p>
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Educate">Education</a>
+                <a href="#yanto">Projects</a>
+                <a href="#Contact">Contact</a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <h3>Follow Me</h3>
+
+                <a href="https://github.com/arvaadri">
+                    <i class="fab fa-github"></i>
+                    Github
+                </a>
+
+                <a href="https://www.instagram.com/addarvv?stkn=MXFochHM5dWJ6dno4bQ==">
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+                </a>
+
+                <a href="#">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 Muhammad Arva Zufar A. All Rights Reserved.
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const form = document.querySelector(".contact-form");
+
+        if (form) {
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                alert(`Terima kasih, ${name}! Pesan Anda sudah terkirim.`);
+            });
+        }
+    </script>
+
 </body>
+
 </html>
-
-
-<script>
-  // Ambil elemen form
-  const form = document.querySelector(".contact_me");
-
-  form.addEventListener("submit", function (e) {
-
-    // Ambil data input
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    alert(`Terima kasih, ${name}! Pesan Anda sudah terkirim.`);
-
-  });
-</script>
