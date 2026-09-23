@@ -16,7 +16,7 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 150;
-        if (scrollY >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
     });
@@ -38,19 +38,14 @@ const language = {
         navContact: "Kontak",
 
         loadText: "Mengubah Bahasa...",
-
         hello: "Halo",
 
         heroDesc: "Saya merupakan siswa di SMK Negeri 40 Jakarta jurusan Rekayasa Perangkat Lunak. Saya menguasai HTML, CSS, dan C#.",
-
         heroBtn: "Mulai",
 
         about: "Tentang Saya",
-
         aboutJob: "Frontend Developer & UI Designer",
-
         aboutDesc1: "Saya merupakan siswa jurusan Rekayasa Perangkat Lunak di SMK Negeri 40 Jakarta.",
-
         aboutDesc2: "Saya senang mempelajari teknologi baru serta membangun website modern.",
 
         softSkills1: "KERJA BERSAMA TIM",
@@ -77,7 +72,6 @@ const language = {
         projects: "Projek",
 
         contact: "Hubungi Saya",
-
         formBtn: "Kirim Pesan",
 
         projectDesc: "Beberapa projek yang telah saya kerjakan.",
@@ -102,19 +96,14 @@ const language = {
         navContact: "Contact",
 
         loadText: "Changing Language...",
-
         hello: "Hello",
 
         heroDesc: "I am a Software Engineering student at SMK Negeri 40 Jakarta. I specialize in HTML, CSS and C#.",
-
         heroBtn: "Get Started",
 
         about: "About Me",
-
         aboutJob: "Frontend Developer & UI Designer",
-
         aboutDesc1: "I am a Software Engineering student at SMK Negeri 40 Jakarta.",
-
         aboutDesc2: "I enjoy learning new technologies and building modern websites.",
 
         softSkills1: "TEAMWORK",
@@ -141,7 +130,6 @@ const language = {
         projects: "Projects",
 
         contact: "Contact Me",
-
         formBtn: "Send Message",
 
         projectDesc: "A selection of projects I've worked on.",
@@ -166,19 +154,14 @@ const language = {
         navContact: "التواصل",
 
         loadText: "جاري تغيير اللغة...",
-
         hello: "مرحباً",
 
         heroDesc: "أنا طالب في المدرسة الثانوية المهنية 40 بياكارتا قسم هندسة البرمجيات. أتقن لغات البرمجة HTML و CSS و #C.",
-
         heroBtn: "ابدأ",
 
         about: "نبذة عني",
-
         aboutJob: "مطور واجهات أمامي ومصمم واجهات المستخدم",
-
         aboutDesc1: "أنا طالب في قسم هندسة البرمجيات بالمدرسة الثانوية المهنية 40 بياكارتا.",
-
         aboutDesc2: "أستمتع بتعلم التقنيات الجديدة وبناء مواقع ويب حديثة وسريعة ومتجاوبة.",
 
         softSkills1: "العمل الجماعي",
@@ -205,7 +188,6 @@ const language = {
         projects: "المشاريع",
 
         contact: "التواصل معي",
-
         formBtn: "إرسال الرسالة",
 
         projectDesc: "بعض المشاريع التي عملت عليها.",
@@ -230,7 +212,6 @@ function changeLanguage(lang) {
 
     document.getElementById(lang + "-btn").classList.add("active-lang");
 
-    // Mengatur arah membaca (RTL untuk Bahasa Arab, LTR untuk ID & EN)
     if (lang === "ar") {
         document.documentElement.setAttribute("dir", "rtl");
         document.documentElement.setAttribute("lang", "ar");
@@ -253,17 +234,12 @@ function changeLanguage(lang) {
     document.getElementById("about-location").textContent = language[lang].aboutLocation;
 
     document.getElementById("hello").textContent = language[lang].hello;
-
     document.getElementById("hero-desc").textContent = language[lang].heroDesc;
-
     document.getElementById("hero-btn").textContent = language[lang].heroBtn;
 
     document.getElementById("about-title").textContent = language[lang].about;
-
     document.getElementById("about-job").textContent = language[lang].aboutJob;
-
     document.getElementById("about-desc1").textContent = language[lang].aboutDesc1;
-
     document.getElementById("about-desc2").textContent = language[lang].aboutDesc2;
 
     document.getElementById("softskills1").textContent = language[lang].softSkills1;
@@ -282,9 +258,7 @@ function changeLanguage(lang) {
     document.getElementById("edu-sd").textContent = language[lang].eduSd;
 
     document.getElementById("project-title").textContent = language[lang].projects;
-
     document.getElementById("contact-title").textContent = language[lang].contact;
-
     document.getElementById("form-btn").textContent = language[lang].formBtn;
 
     document.getElementById("project-desc3").textContent = language[lang].projectDesc3;
@@ -299,6 +273,18 @@ function changeLanguage(lang) {
     document.getElementById("name").placeholder = language[lang].namePlaceholder;
     document.getElementById("email").placeholder = language[lang].emailPlaceholder;
     document.getElementById("message").placeholder = language[lang].messagePlaceholder;
+}
+
+function showLoader() {
+    const loader = document.getElementById("loader");
+    document.body.classList.add("fade");
+    loader.classList.add("show");
+}
+
+function hideLoader() {
+    const loader = document.getElementById("loader");
+    loader.classList.remove("show");
+    document.body.classList.remove("fade");
 }
 
 document.getElementById("id-btn").addEventListener("click", () => {
@@ -324,17 +310,3 @@ document.getElementById("ar-btn").addEventListener("click", () => {
         hideLoader();
     }, 400);
 });
-
-changeLanguage("id");
-
-function showLoader() {
-    const loader = document.getElementById("loader");
-    document.body.classList.add("fade");
-    loader.classList.add("show");
-}
-
-function hideLoader() {
-    const loader = document.getElementById("loader");
-    loader.classList.remove("show");
-    document.body.classList.remove("fade");
-}
